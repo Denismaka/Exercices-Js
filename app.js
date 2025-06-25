@@ -46,24 +46,16 @@ const compareStudents = (a, b) => {
 // et trier le tableau des étudiants par moyenne décroissante
 for (let student of students) {
     student.moyenne = moyenne(student.notes);
+    student.worst = Math.min(...student.notes);
+    student.best = Math.max(...student.notes);
 }
 students.sort(compareStudents);
 const formatStudent = (student) => {
-    return `${student.name} avec une moyenne de ${student.moyenne}`;
+    return `${student.name} avec une moyenne de ${student.moyenne}, meilleur note (${student.best}), pire note (${student.worst})`;
 };
 console.log(
     `Top trois etudiants 
     1: ${formatStudent(students[0])}
     2: ${formatStudent(students[1])}
-    3: ${formatStudent(students[2])}
-    4: ${formatStudent(students[3])}
-    5: ${formatStudent(students[4])}`
+    3: ${formatStudent(students[2])}`
 );
-
-// Calculer la moyenne des notes de chaque étudiant
-// et afficher le résultat dans la console
-students.forEach((student) => {
-    console.log(
-        `La moyenne de ${student.name} est de ${moyenne(student.notes)}`
-    );
-});
