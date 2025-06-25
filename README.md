@@ -48,11 +48,13 @@ Ce projet est sous la licence MIT. Consultez le fichier [LICENSE](LICENSE) pour 
 
 N'hésitez pas à me contacter ou à me suivre sur mes réseaux sociaux :
 
-- **Email** : votre.email@example.com
-- **LinkedIn** : [Votre Profil LinkedIn](https://www.linkedin.com/in/votreprofil)
-- **Twitter** : [@votre_twitter](https://twitter.com/votre_twitter)
-- **GitHub** : [Votre Profil GitHub](https://github.com/denismaka)
-
+-   ✉️ **Email** : makadenis370@gmail.com
+-   📱 **Téléphone** : +243818252385, +243997435030.
+-   🔗 **Réseaux sociaux** : Suivez-moi sur :
+    - [Twitter](https://twitter.com/MakaDenis3) 🐦
+    - [LinkedIn](https://www.linkedin.com/in/Denismaka) 💼
+    - [GitHub](https://github.com/Denismaka) 🐱
+    - [Facebook](https://www.facebook.com/Denismaka) 👥
 ---
 
 Merci d'avoir consulté ce README. Bon apprentissage avec JavaScript !
