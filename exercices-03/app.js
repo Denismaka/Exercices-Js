@@ -38,6 +38,22 @@ class Student {
     }
 }
 
+class SuperStudent extends Student {
+    constructor(firstname, lastname, school) {
+        super(firstname, lastname);
+        this.school = school;
+    }
+
+    // Méthode pour afficher les informations de l'étudiant
+    displayInfo() {
+        console.log(
+            `${this.firstname} ${this.lastname} étudie à ${
+                this.school
+            } et a une moyenne de ${this.getAverage()}`
+        );
+    }
+}
+
 // Création d'instances de la classe étudiant
 const denis = new Student("Denis", "Maka");
 const wilson = new Student("Wilson", "Maka");
