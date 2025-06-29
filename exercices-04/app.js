@@ -96,3 +96,10 @@ console.log(map1);
 // Exemples
 const notesss = [12, 17, 18, 9, 7];
 console.log(notesss.reduce((acc, note) => acc + note, 0) / notesss.length);
+
+// ##############
+// reduce
+// ##############
+// Exemples
+const notessss = [12, 17, 18, 9, 7];
+console.log(notessss.reduce((acc, note) => acc + note, 0) / notessss.length);
