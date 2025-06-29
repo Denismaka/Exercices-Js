@@ -89,3 +89,10 @@ const persons = [
 ];
 const map1 = persons.map((person) => person.firstname).join("\n");
 console.log(map1);
+
+// ##############
+// reduce
+// ##############
+// Exemples
+const notesss = [12, 17, 18, 9, 7];
+console.log(notesss.reduce((acc, note) => acc + note, 0) / notesss.length);
