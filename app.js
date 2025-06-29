@@ -1,59 +1,91 @@
-// Notion des exceptions en Javascript
-// ##########################################################
-// Exercice 3[2] :
-// ##########################################################
+// #############################################
+// Qualque fonctions usuelles
+// #############################################
 
-class Retangle {
-    constructor(width, height) {
-        if (width <= 0 || height <= 0) {
-            throw new Error(
-                "Impossible d'avoir une forme géométrique avec des dimensions négative"
-            );
-        }
-        this.width = width;
-        this.height = height;
-    }
+// ##############
+// concat
+// ##############
+const array1 = ["a", "b", "c"];
+const array2 = ["d", "e", "f"];
+const array3 = array1.concat(array2);
+console.log(array3);
 
-    get perimeter() {
-        return (this.width + this.height) * 2;
-    }
+// ##############
+// fill
+// ##############
+const array = [1, 2, 3, 4];
+console.log(array.fill(0, 2, 4));
+console.log(array.fill(5, 1));
+console.log(array.fill(6));
 
-    get isValid() {
-        return this.width > 0 && this.height > 0;
-    }
+// ##############
+// filter
+// ##############
+// Exemples 1
+const words = [
+    "limite",
+    "destruction",
+    "elite",
+    "exuberant",
+    "absent",
+    "present",
+];
+const result = words.filter((word) => word.length <= 6);
+console.log(result);
 
-    isBiggerThan(shape) {
-        return this.perimeter > shape.perimeter;
-    }
-    isBiggerThan(other) {
-        return this.perimeter > other.perimeter;
-    }
+// Exemples 2
+const notes = [12, 17, 18, 9, 7];
+const maivaisesNotes = notes.filter((note) => note < 10);
+const goodNotes = notes.filter((note) => note >= 10);
+
+if (maivaisesNotes.length > 0) {
+    console.log("Notes non réussies :", maivaisesNotes);
+} else {
+    console.log("Toutes les notes sont réussies !");
 }
 
-// Classe qui hérite de la classe Retangle pour représenter un carré
-// Un carré est un rectangle avec une largeur et une hauteur égales
-class Square extends Retangle {
-    constructor(width) {
-        super(width, width);
-    }
+if (goodNotes) {
+    console.log("Notes réussies :", goodNotes);
 }
 
-try {
-    const r = new Retangle(-10, 20);
-} catch (e) {
-    console.log(e);
-}
+// ##############
+// Find
+// ##############
+// Exemples
+const arrayf = [5, 12, 8, 130, 44];
+const found = arrayf.find((element) => element > 10);
+console.log(found);
 
-// // Classe de base pour les formes géométriques
-// const r = new Retangle(10, 20);
-// console.log(r.perimeter);
-// console.log(r.isValid);
+// ##############
+// forEach
+// ##############
+// Exemples
+const arrays = ["a", "b", "c"];
+arrays.forEach((element) => console.log(element));
 
-// // Classe Rectangle qui hérite de la classe Forme
-// const r2 = new Retangle(-10, 20);
-// console.log(r.isValid);
+// ##############
+// from
+// ##############
+// Exemples
+console.log(Array.from("foo"));
+console.log(Array.from([1, 2, 3]), (x) => x + x);
 
-// // Classe Forme
-// const c = new Square(10);
-// console.log(c.perimeter);
-// console.log(c.isBiggerThan(r));
+// ##############
+// includes
+// ##############
+// Exemples
+const table = [1, 2, 3];
+console.log(table.includes(5));
+
+// ##############
+// map
+// ##############
+// Exemples
+const persons = [
+    { firstname: "John", lastname: "Doe" },
+    { firstname: "Jane", lastname: "Smith" },
+    { firstname: "Jim", lastname: "Brown" },
+    { firstname: "Jack", lastname: "Johnson" },
+];
+const map1 = persons.map((person) => person.firstname).join("\n");
+console.log(map1);
