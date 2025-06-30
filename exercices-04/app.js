@@ -5,101 +5,86 @@
 // ##############
 // concat
 // ##############
-const array1 = ["a", "b", "c"];
-const array2 = ["d", "e", "f"];
-const array3 = array1.concat(array2);
-console.log(array3);
+const array1 = ["Alice", "Bob", "Charlie"];
+const array2 = ["David", "Eve", "Frank"];
+const students = array1.concat(array2);
+console.log("Liste des étudiants :", students);
 
 // ##############
 // fill
 // ##############
-const array = [1, 2, 3, 4];
-console.log(array.fill(0, 2, 4));
-console.log(array.fill(5, 1));
-console.log(array.fill(6));
+const grades = [10, 12, 15, 18];
+console.log("Notes initiales :", grades);
+console.log("Remplissage de 0 à partir de l'indice 2 :", grades.fill(0, 2, 4));
 
 // ##############
 // filter
 // ##############
-// Exemples 1
-const words = [
-    "limite",
-    "destruction",
-    "elite",
-    "exuberant",
-    "absent",
-    "present",
-];
-const result = words.filter((word) => word.length <= 6);
-console.log(result);
+// Filtrer les noms d'étudiants ayant moins de 6 lettres
+const shortNames = students.filter((name) => name.length <= 6);
+console.log("Noms d'étudiants courts :", shortNames);
 
-// Exemples 2
-const notes = [12, 17, 18, 9, 7];
-const maivaisesNotes = notes.filter((note) => note < 10);
-const goodNotes = notes.filter((note) => note >= 10);
+// Filtrer les notes
+const notes = [12, 17, 8, 9, 15];
+const failingGrades = notes.filter((note) => note < 10);
+const passingGrades = notes.filter((note) => note >= 10);
 
-if (maivaisesNotes.length > 0) {
-    console.log("Notes non réussies :", maivaisesNotes);
+if (failingGrades.length > 0) {
+    console.log("Notes non réussies :", failingGrades);
 } else {
     console.log("Toutes les notes sont réussies !");
 }
 
-if (goodNotes) {
-    console.log("Notes réussies :", goodNotes);
-}
+console.log("Notes réussies :", passingGrades);
 
 // ##############
-// Find
+// find
 // ##############
-// Exemples
-const arrayf = [5, 12, 8, 130, 44];
-const found = arrayf.find((element) => element > 10);
-console.log(found);
+// Trouver la première note supérieure à 10
+const firstPassingGrade = notes.find((grade) => grade > 10);
+console.log("Première note réussie :", firstPassingGrade);
 
 // ##############
 // forEach
 // ##############
-// Exemples
-const arrays = ["a", "b", "c"];
-arrays.forEach((element) => console.log(element));
+// Afficher chaque nom d'étudiant
+console.log("Affichage des étudiants :");
+students.forEach((student) => console.log(student));
 
 // ##############
 // from
 // ##############
-// Exemples
-console.log(Array.from("foo"));
-console.log(Array.from([1, 2, 3]), (x) => x + x);
+// Créer un tableau à partir d'une chaîne de caractères
+console.log("Tableau à partir de 'foo' :", Array.from("foo"));
+console.log(
+    "Tableau doublé :",
+    Array.from([1, 2, 3], (x) => x + x)
+);
 
 // ##############
 // includes
 // ##############
-// Exemples
+// Vérifier si une note est présente
 const table = [1, 2, 3];
-console.log(table.includes(5));
+console.log("La table inclut 2 :", table.includes(2));
+console.log("La table inclut 5 :", table.includes(5));
 
 // ##############
 // map
 // ##############
-// Exemples
+// Extraire les prénoms des étudiants
 const persons = [
     { firstname: "John", lastname: "Doe" },
     { firstname: "Jane", lastname: "Smith" },
     { firstname: "Jim", lastname: "Brown" },
     { firstname: "Jack", lastname: "Johnson" },
 ];
-const map1 = persons.map((person) => person.firstname).join("\n");
-console.log(map1);
+const firstNames = persons.map((person) => person.firstname).join(", ");
+console.log("Prénoms des étudiants :", firstNames);
 
 // ##############
 // reduce
 // ##############
-// Exemples
-const notesss = [12, 17, 18, 9, 7];
-console.log(notesss.reduce((acc, note) => acc + note, 0) / notesss.length);
-
-// ##############
-// reduce
-// ##############
-// Exemples
-const notessss = [12, 17, 18, 9, 7];
-console.log(notessss.reduce((acc, note) => acc + note, 0) / notessss.length);
+// Calculer la moyenne des notes
+const averageGrade = notes.reduce((acc, note) => acc + note, 0) / notes.length;
+console.log("Moyenne des notes :", averageGrade);
