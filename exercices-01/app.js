@@ -4,6 +4,7 @@
 
 // Objectif : Créer un tableau d'objets représentant des étudiants
 // avec leurs notes, puis calculer et afficher la moyenne de chaque étudiant.
+
 const students = [
     {
         name: "Jhon",
@@ -27,35 +28,36 @@ const students = [
     },
 ];
 
-// Fonction pour calculer la moyenne des notes
-// d'un étudiant et l'afficher dans la console
+// Fontion pour calculer la moyenne des note d'un étudiant
 const moyenne = (notes) => {
-    let sum = 0;
-    for (let note of notes) {
-        sum = sum + note;
-    }
+    const sum = notes.reduce((acc, note) => acc + note, 0);
     return sum / notes.length;
 };
 
-// Fonction pour comparer deux étudiants
+// Fontion pour comparer deux étudiants par leur moyenne
 const compareStudents = (a, b) => {
     return b.moyenne - a.moyenne;
 };
 
-// Calculer la moyenne de chaque étudiant
-// et trier le tableau des étudiants par moyenne décroissante
+// Calcler la moyenne, la meillure et la pire note de chaque étudiant
 for (let student of students) {
     student.moyenne = moyenne(student.notes);
     student.worst = Math.min(...student.notes);
     student.best = Math.max(...student.notes);
 }
+
+// Trier le tbleau des étudiants par moyene décroissante
 students.sort(compareStudents);
+
+// Fonction pour formater l'affichage des infrmation d'un étudiant
 const formatStudent = (student) => {
-    return `${student.name} avec une moyenne de ${student.moyenne}, meilleur note (${student.best}), pire note (${student.worst})`;
+    return `${student.name} avec une moyenne de ${student.moyenne.toFixed(
+        2
+    )}, meilleure note (${student.best}), pire note (${student.worst})`;
 };
-console.log(
-    `Top trois etudiants
-    1: ${formatStudent(students[0])}
-    2: ${formatStudent(students[1])}
-    3: ${formatStudent(students[2])}`
-);
+
+// Afficher les trois meilleurs étudiants
+console.log(`Top trois étudiants:`);
+console.log(`1: ${formatStudent(students[0])}`);
+console.log(`2: ${formatStudent(students[1])}`);
+console.log(`3: ${formatStudent(students[2])}`);
