@@ -2,13 +2,13 @@
 // Les timers
 // #############################################
 function decompte(n) {
-    console.log(n); // Affiche le nombre actuel du compte à rebours
+    console.log(n);
     if (n === 0) {
         console.log("Lancement du produit !");
-        return; // Fin du compte à rebours
+        return;
     }
     setTimeout(() => {
-        decompte(n - 1); // Appel récursif après 1 seconde
+        decompte(n - 1);
     }, 1000);
 }
 
