@@ -7,13 +7,12 @@
     </head>
 
     <body>
-        <style>
-            body {
-                background-color: rgb(77, 15, 15);
-                color: wheat;
-            }
-        </style>
+        <script type="module">
+            import { calculatrice } from "./app.js";
+            console.log(calculatrice(10, 2, '+'));
+            console.log(calculatrice(10, 2, '-'));
+        </script>
     </body>
 
-    <script src="app.js"></script>
+    <!-- <script src="app.js" type="module"></script> -->
 </html>
