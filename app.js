@@ -1,5 +1,3 @@
 // #############################################
-// Manipuler le DOM
+// Les écouter d'événements
 // #############################################
-const ul = document.querySelector("ul");
-console.log(ul.nodeName, ul.innerHTML);
