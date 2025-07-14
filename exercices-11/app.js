@@ -1,3 +1,6 @@
+// #############################################
+// Pratique d'une TodoList
+// #############################################
 import { TodoList } from "./components/TodoList.js";
 import { fetchJSON } from "./functions/api.js";
 import { createElement } from "./functions/dom.js";
