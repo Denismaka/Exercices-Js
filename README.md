@@ -7,19 +7,19 @@ Ce projet contient une série d'exercices en JavaScript conçus pour aider les d
 ## 📝 Liste des exercices
 
 1. **Exercice 1 : Introduction aux variables**
-   - Objectif : Comprendre la déclaration et l'utilisation des variables.
-   
+    - Objectif : Comprendre la déclaration et l'utilisation des variables.
 2. **Exercice 2 : Fonctions et portée**
-   - Objectif : Explorer les fonctions et la portée des variables.
-   
+    - Objectif : Explorer les fonctions et la portée des variables.
 3. **Exercice 3 : Manipulation du DOM**
-   - Objectif : Apprendre à interagir avec le Document Object Model (DOM).
+
+    - Objectif : Apprendre à interagir avec le Document Object Model (DOM).
 
 4. **Exercice 4 : Promesses et async/await**
-   - Objectif : Comprendre les promesses et la gestion asynchrone.
+
+    - Objectif : Comprendre les promesses et la gestion asynchrone.
 
 5. **Exercice 5 : API Fetch**
-   - Objectif : Apprendre à faire des requêtes HTTP avec l'API Fetch.
+    - Objectif : Apprendre à faire des requêtes HTTP avec l'API Fetch.
 
 ## 🤝 Contribuer
 
@@ -27,17 +27,17 @@ Les contributions sont les bienvenues ! Pour contribuer :
 
 1. Forkez le projet.
 2. Créez une branche pour votre fonctionnalité :
-   ```bash
-   git checkout -b feature/nouvelle-fonctionnalité
-   ```
+    ```bash
+    git checkout -b feature/nouvelle-fonctionnalité
+    ```
 3. Commitez vos modifications :
-   ```bash
-   git commit -m "Ajout d'une nouvelle fonctionnalité"
-   ```
+    ```bash
+    git commit -m "Ajout d'une nouvelle fonctionnalité"
+    ```
 4. Poussez la branche :
-   ```bash
-   git push origin feature/nouvelle-fonctionnalité
-   ```
+    ```bash
+    git push origin feature/nouvelle-fonctionnalité
+    ```
 5. Ouvrez une Pull Request.
 
 ## 📄 License
@@ -51,10 +51,11 @@ N'hésitez pas à me contacter ou à me suivre sur mes réseaux sociaux :
 -   ✉️ **Email** : makadenis370@gmail.com
 -   📱 **Téléphone** : +243818252385, +243997435030.
 -   🔗 **Réseaux sociaux** : Suivez-moi sur :
-    - [Twitter](https://twitter.com/MakaDenis3) 🐦
-    - [LinkedIn](https://www.linkedin.com/in/Denismaka) 💼
-    - [GitHub](https://github.com/Denismaka) 🐱
-    - [Facebook](https://www.facebook.com/Denismaka) 👥
+    -   [Twitter](https://twitter.com/MakaDenis3) 🐦
+    -   [LinkedIn](https://www.linkedin.com/in/Denismaka) 💼
+    -   [GitHub](https://github.com/Denismaka) 🐱
+    -   [Facebook](https://www.facebook.com/Denismaka) 👥
+
 ---
 
 Merci d'avoir consulté ce README. Bon apprentissage avec JavaScript !
